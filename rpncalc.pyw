@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import ttk
 from rpn     import Rpn
 
 rpn = Rpn()
@@ -20,7 +19,8 @@ hist = '0.0'
 
 root = Tk()
 root.title("RPyNCalc")
-#root.iconbitmap('RPyNCalc.ico')
+icon = PhotoImage(file='RPyNCalc.png')
+root.call('wm', 'iconphoto', root._w, icon)
 root.resizable(False, False)
 
 frame_display = Frame(root, padx=5, pady=5)
